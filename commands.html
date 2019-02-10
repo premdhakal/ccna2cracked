@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>commands</title>
+<link href="tryCSS.css" rel="stylesheet" type="text/css">
+	<style>
+	h1{
+    padding: 5px;
+    font-size: 50px;
+	margin-left: 250px;
+	}
+	
+	#commandLists,#commandLists2{
+	font-size: 22px;
+	margin-top: 5px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	padding-left: 25px;
+	text-indent: 2px;
+	background-color: rgba(215,181,181,0.85);
+	}
+		#commandLists2{
+	background-color: rgba(156,153,153,0.70)
+}
+		#exp{
+			width: 500px;
+			float: right;
+			font-size: 23px;
+		}
+		.commnadMain{
+			width: 900px;
+			margin-left: 200px;
+		}
+    </style>
+</head>
+
+<body>
+		<div class="mainContainer"  style="width: 100%">
+			<div class="navigation" style="width: 100%">
+				<div class="rightNav" style="width: 80%">
+					<a href="faq.html">FAQ</a>
+					<a href="contact.html">Contact Us</a>
+					<a href="tips-tricks.html" >Tips/Tricks</a>
+					<a href="calculator.html">Calculator</a>
+					<a href="index.html">Home</a>
+			</div>
+			<div class="leftNav" style="width: 20%">
+				<img src="finalLogo1.png" id="logo1" alt="logo" style="width: 100%" height="63px" >
+			</div>
+			</div>
+		</div><!-- End of navigation -->
+	<div class="commnadMain" style="margin-top: -900px;">
+		<h1>Command Lists</h1>
+		<p id="commandLists">1) <b>Enter Configuration Mode</b><span id="exp">#configure terminal</span><br><br></p>
+		<p id="commandLists2">2) <b>Enter Interface Mode </b><span id="exp">#interface fa0/1</span><br><br></p>
+		<p id="commandLists">3) <b>Enter HostName </b><span id="exp">#hostname switch1</span><br><br></p>
+		<p id="commandLists2">4) <b>Enter Banner Message </b><span id="exp">#banner motd $</span><br><br></p>
+		<p id="commandLists">5) <b>Select One Inferface </b><span id="exp">#int fa0/1</span><br><br></p>
+		<p id="commandLists2">6) <b>Select Interface Range </b><span id="exp">#int range fa0/1-11</span><br><br></p>
+		<p id="commandLists">7) <b>Enter description </b><span id="exp">#description _ _ _ _</span><br><br></p>
+		<p id="commandLists2">8) <b>Add vlan using config mode </b><span id="exp">#vlan 3</span><br><br></p>
+		<p id="commandLists">9) <b>Set auto timezone </b><span id="exp">#clock summer-time est 0</span><br><br></p>
+		<p id="commandLists2">10) <b>Set clock rate</b><span id="exp">#clock rate 64000</span><br><br></p>
+		<p id="commandLists">11) <b>Enable no domain lookup </b><span id="exp">#no ip domain-lookup</span><br><br></p>
+		<p id="commandLists2">12) <b>Display History </b><span id="exp">#show history</span><br><br></p>
+		<p id="commandLists">13) <b>Display Interface status</b><span id="exp">#show ip int brief</span><br><br></p>
+		<p id="commandLists2">14) <b>Display Protocals </b><span id="exp">#show ip protocals</span><br><br></p>
+		<p id="commandLists">15) <b>Display IP routing table </b><span id="exp">show ip route</span><br><br></p>
+			</p>
+	</div>
+		<div class="footer"  style="width: 100%; margin-top: 15px">
+			<p> <h3>All Right Reserved @Prem Dhakal</h3></p>
+		</div><!-- End of footer -->
+</body>
+</html>

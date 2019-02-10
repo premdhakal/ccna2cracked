@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>contact</title>
+<link href="tryCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body style="font-size: 20px">
+	<div class="mainContainer"  style="width: 100%">
+		<div class="navigation" style="width: 100%">
+			<div class="rightNav" style="width: 80%">
+				<a href="faq.html">FAQ</a>
+				<a href="contact.html">Contact Us</a>
+				<a href="tips-tricks.html" >Tips/Tricks</a>
+				<a href="calculator.html">Calculator</a>
+				<a href="index.html">Home</a>
+			</div>
+			<div class="leftNav" style="width: 20%">
+				<img src="finalLogo1.png" id="logo1" alt="logo" style="width: 100%" height="63px" >
+			</div>
+		</div><!-- End of navigation -->
+		
+		<div class="contact" id="contact">
+			<form class="contactUs">
+				<p id="time" align="center"></p>
+				<br><label for="fname">First Name</label>
+				<input type="text" id="fname" placeholder="First Name">
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" placeholder="Last Name">
+				<label for="email">Email Id</label>
+				<input type="text" id="email" placeholder="Email ID">
+
+				<label for="Education">Education</label><br>
+				<select id="Education" name="Education">
+					<option value="High School">High School</option>
+					<option value="College">College</option>
+					<option value="Masters">Master</option>
+					<option value="Others">Others</option>
+				</select>
+				
+				<label for="Gender">Gender: </label><br>
+				<input type="radio" name="gender" value="Male">Male
+				<input type="radio" name="gender" value="Female">Female
+				<input type="radio" name="gender" value="Others">Others<br><br>
+
+				<label for="Comment">Comment</label>
+				<textarea id="Comment" placeholder="Say What?" style="height: 300px"></textarea>
+	
+				<input type="submit" value="Send" onClick="sending()">
+			</form>
+		</div>
+		
+		<div class="footer"  style="width: 100%">
+			<p> <h3>All Right Reserved @Prem Dhakal</h3></p>
+		</div><!-- End of footer -->
+	</div>
+</body>
+
+		<script>
+			var x = new Date();
+			var months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+			document.getElementById("time").innerHTML = "Today's date is "+ months[x.getMonth()]+" " +x.getDate() + ", "+x.getFullYear()+".";
+		</script>
+	<script>
+		function sending(){
+			document.write("Thank you for your input");
+		}
+	</script>
+
+	<style>
+		input[type=text], select, textarea{
+    width: 750px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    height: 40px;
+		}
+		
+		.contact{
+    border-radius: 5px;
+    width: 820px;
+    padding-top: 35px;
+    padding-bottom: 0px;
+    padding-left: 220px;
+		}
+		
+		.contactUs{
+    background-color: #D7B5B5;
+    align-content: center;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+		}
+		
+		body{
+			background-image: url(networking.jpg);
+		}
+
+		#time{
+		font-size: 36px;
+		}
+		
+		.videoBody{
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+		}
+	</style>
+</html>

@@ -1,0 +1,156 @@
+@charset "utf-8";
+
+*{
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+	
+}
+
+body{
+	width: 1300px;
+	height: 1000px;
+	margin: auto;
+}
+
+.mainContainer{
+	height: 1000px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+.rightSide{
+    height: 275px;
+    flex: 35%;
+    float: right;
+    padding-top: 0px;
+    background-color: snow;
+}
+
+.leftSide{
+    height: 275px;
+    flex: 100%;
+    float: left;
+	 background-color: coral;
+}
+
+.middleSection{
+    height: 700px;
+	background-color: #e8cfcf;
+	background-image: url(networking.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+    width: 100%;
+    margin-top: 275px;
+}
+.footer{
+    padding-top: 20px;
+    width: 1000px;
+    height: 50px;
+    background-color: #1B6C92;
+    clear: both;
+    margin-top: 40px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: -0px;
+    color: white;
+    text-align: center;
+    padding-right: 0px;
+}
+
+
+.navigation{
+	height: 70px;
+	width: 1000px;
+}
+
+.rightNav{
+    float: right;
+    flex: 50%;
+    height: 70px;
+    background-color: rgba(0,179,212,1.00); /*navigation bar color*/
+}
+
+.leftNav{
+    float: left;
+    flex: 50%;
+    height: 70px;
+    color: whitesmoke;
+    font-size: 25px;
+    font-style: oblique;
+	position: absolute;
+}
+
+.navigation a{
+    float: right;
+    padding-top: 5px;
+    margin-top:15px;
+    margin-right: 10px;
+    margin-left: 30px;
+    font-size: 28px;
+    color: snow; /*text color*/
+    text-decoration: none;
+    line-height: 28px; /*Line height matching down image's height*/
+    border-radius: 2px;
+}
+
+
+input{
+	padding: 10px;
+	font-size: inherit;
+	margin-bottom: 5px;
+	width: 275px;
+}
+input[type="text"]{
+    width: 275px;
+    height: 25px;
+    font-size: 30px;
+    padding: 2px;
+    margin-left: 40px;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+input[type="password"]{
+    width: 275px;
+    height: 25px;
+    font-size: 30px;
+    padding: 2px;
+    color: white;
+    margin-left: 40px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"]{
+    width: 275px;
+    height: 40px;
+    background-color: #4272d7;
+    font-size: 30px;
+    padding: 2px;
+    color: white;
+    margin-left: 42px;
+    margin-bottom: 5px;
+}
+
+#forgetPsd{
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 41px;
+}
+
+.navigation .rightNav a:hover{
+    background-color: #4caf50;
+    height: 70px;
+    font-size: 30px;
+	transition-delay:0.3s;
+	margin-top: -5px;
+}
+
+.middleSection img:hover{
+    box-shadow: 0 12px 24px 0 rgba(248,0,23,0.60);
+    -webkit-box-shadow: 0 12px 24px 0 rgba(248,0,23,0.60);
+}

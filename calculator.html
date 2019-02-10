@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calculator</title>
+<link href="tryCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body>
+		<div class="mainContainer"  style="width: 100%">
+		<div class="navigation" style="width: 100%">
+			<div class="rightNav" style="width: 80%">
+				<a href="faq.html">FAQ</a>
+				<a href="contact.html">Contact Us</a>
+				<a href="tips-tricks.html" >Tips/Tricks</a>
+				<a href="calculator.html">Calculator</a>
+				<a href="index.html">Home</a>
+			</div>
+			<div class="leftNav" style="width: 20%">
+				<img src="finalLogo1.png" id="logo1" alt="logo" style="width: 100%" height="63px" >
+			</div>
+		</div><!-- End of navigation -->
+		
+		
+		<div class="calculatorArea" id="form1" >
+				<h1 >&nbsp Enter Ip Address Info Here</h1>
+			<form class="ipInput">
+				<p><input type="text1" id="part1" name="p1" maxlength=3 oninput="confirmPart1.value=part1.value">
+				.<input type="text1" id="part2" maxlength=3 oninput="confirmPart2.value=part2.value">
+				.<input type="text1" id="part3" maxlength=3 oninput="confirmPart3.value=part3.value" >
+				.<input type="text" id="part4" maxlength=3 oninput="confirmPart4.value=part4.value">
+				/<input type="text" id="part5" maxlength=2 max="30" placeholder="optional" oninput="confirmPart5.value=part5.value">
+					<button  id="tryIT" type="button" onClick="calculate()" >Try It</button></p>
+			</form>			
+		</div><!-- End of calcArea-->
+		
+	<div class="para">
+		<p id="demo" style="background-color: #D7B5B5;"></p>		
+		<p id="demo1" style="background-color: #00B3D4;"></p>
+		<p id="defSubnet" style="background-color: #D7B5B5;"></p>	
+		<p id="Subnet" style="background-color: #00B3D4;"></p>
+		<p id="firstIp" style="background-color: #D7B5B5;"></p>
+		<p id="maxHost" style="background-color: #00B3D4;"></p>
+	</div>
+		
+	</div><!-- End of main conatiner -->
+	
+	
+		<div class="footer"  style="width: 100%">
+			<p> <h3>All Right Reserved @Prem Dhakal</h3></p>
+		</div><!-- End of footer -->
+</body>
+		<script>
+					function calculate(){
+					var w,x, y,z, p1, answer;
+						w= document.getElementById("part1").value;
+						x= document.getElementById("part2").value;
+						y= document.getElementById("part3").value;
+						z= document.getElementById("part4").value;
+						zz = document.getElementById("part5").value;
+						
+						var a = parseInt(document.getElementById("part1").value);
+						/*y = x.elements["p1"].value;
+						document.getElementById("demo").innerHTML="hellow";*/
+						var b = parseInt(document.getElementById("part5").value);
+						var c = parseInt(document.getElementById("part4").value);
+
+						
+						document.getElementById("firstIp").innerHTML="First Ip Address: "+a+"."+b+"."+z+"."+(c+1);
+						document.getElementById("maxHost").innerHTML="Max host: " + (2*(32-b)-2);
+						
+						if(a >= 1 && a <= 126){
+							document.getElementById("demo").innerHTML="Ip Address: "+a+"."+x+"."+y+"."+z+"/"+zz;
+							document.getElementById("demo1").innerHTML="Class:	 				A";
+							document.getElementById("defSubnet").innerHTML="Default subnet mask:	255.0.0.0";
+							if (b == '8'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.0.0.0";}
+							else if (b == '9'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.128.0.0";}
+							else if (b == '10'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.192.0.0";}
+							else if (b == '11'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.0.0";}
+							else if (b == '12'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.0.0";}
+							else if (b == '13'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.0.0";}
+							else if (b == '14'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.0.0";}
+							else {document.getElementById("Subnet").innerHTML="Subnet Mask: Couldn't Calculated"}
+						}else if(a >= 128 && a <= 191){
+							document.getElementById("demo").innerHTML="Ip Address: "+a+"."+x+"."+y+"."+z;
+							document.getElementById("demo1").innerHTML="Class:	 B";
+							document.getElementById("defSubnet").innerHTML="Default subnet mask:	255.255.0.0";
+							if (b == '16'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.0.0";}
+							else if (b == '17'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.128.0";}
+							else if (b == '18'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.192.0";}
+							else if (b == '19'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.224.0";}
+							else if (b == '20'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.240.0";}
+							else if (b == '21'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.248.0";}
+							else if (b == '22'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.252.0";}
+							else {document.getElementById("Subnet").innerHTML="Subnet Mask: Couldn't Calculated"}
+						}else if(a >= 192 && a <= 223){
+							document.getElementById("demo").innerHTML="Ip Address: "+a+"."+x+"."+y+"."+z;
+							document.getElementById("demo1").innerHTML="Class:	 C";
+							document.getElementById("defSubnet").innerHTML="Default subnet mask:	255.255.255.0";
+							if (b == '24'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.0";}
+							else if (b == '25'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.128";}
+							else if (b == '26'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.192";}
+							else if (b == '27'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.224";}
+							else if (b == '28'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.240";}
+							else if (b == '29'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.248";}
+							else if (b == '30'){document.getElementById("Subnet").innerHTML="Subnet mask:	255.255.255.252";}
+							else {document.getElementById("Subnet").innerHTML="Subnet Mask: Invalid!!!"}
+						}else{
+							document.getElementById("demo1").innerHTML="Enter 1 - 223, Only!!!";
+						}
+					}
+				</script>
+	
+	<style>
+		.conf{
+			background: #ffc728;
+			max-width: 600px;
+			padding: 10px;
+			color: red;
+		}
+		
+		.conf input{
+    -webkit-apperance: none;
+    apperance: none;
+    border: none;
+    background: none;
+    width: 50px;
+    height: 250px;
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 30px;
+    margin-top: -80px;
+    margin-right: 10px;
+		}
+		
+		.ipInput input{
+    width: 120px;
+    height: 25px;
+    font-size: 20px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-left: 20px;
+    margin-top: 10px;
+		}
+	
+		.para{
+    font-size: 30px;
+    width: 733px;
+    padding-left: 20px;
+}
+
+	</style>
+</html>
